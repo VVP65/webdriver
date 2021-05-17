@@ -37,7 +37,7 @@ public class ChromeDriverTests extends BaseTest {
         int wikiTitleLength = driver.getTitle().length();
         logger.info("Wiki Page Title Length is: " + wikiTitleLength);
         String wikiPageURL = driver.getCurrentUrl();
-        Assert.assertTrue(wikiPageURL.contains("ru.wikipedia.org"), "Current URL is incorrect.");
+        Assert.assertTrue(wikiPageURL.contains("wikipedia.org"), "Current URL is incorrect.");
         logger.info("The current page URL is: " + wikiPageURL);
         int wikiPageLength = driver.getPageSource().length();
         logger.info("Wiki Page Source Length: " + wikiPageLength);
