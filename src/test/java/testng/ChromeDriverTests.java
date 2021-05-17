@@ -57,4 +57,3 @@ public class ChromeDriverTests extends BaseTest {
         Assert.assertTrue(contentOfWikipediaSearchResult.contains("Test Automation"), "The search results are not contain expected text.");
     }
 }
-
