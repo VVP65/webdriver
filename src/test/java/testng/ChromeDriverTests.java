@@ -38,9 +38,9 @@ public class ChromeDriverTests extends BaseTest {
         logger.info(String.format("Wiki Page Title Length: %s", wikiTitleLength));
         String wikiPageURL = driver.getCurrentUrl();
         Assert.assertTrue(wikiPageURL.contains("wikipedia.org"), "Current URL is incorrect.");
-        logger.info("The current page URL is: " + wikiPageURL);
+        logger.info(String.format("The current page URL: %s", wikiPageURL));
         int wikiPageLength = driver.getPageSource().length();
-        logger.info("Wiki Page Source Length: " + wikiPageLength);
+        logger.info(String.format("Wiki Page Source Length: %s", wikiPageLength));
         WebElement screenshotOfTheFirstDYKSectionElement = driver.findElement(By.xpath("//div[contains(@id,'dyk')]//img"));
         Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver, screenshotOfTheFirstDYKSectionElement);
         ImageIO.write(screenshot.getImage(), "jpg", new File("target\\ElementScreenshot.jpg"));

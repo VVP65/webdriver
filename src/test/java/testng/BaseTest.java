@@ -16,9 +16,9 @@ public class BaseTest {
     @BeforeClass
     public void browserSetUp() {
         driver = new ChromeDriver();
-//        WebDriverManager.edgedriver().setup();
-//        driver = new EdgeDriver();
-//        driver = new FirefoxDriver();
+        WebDriverManager.edgedriver().setup();
+        driver = new EdgeDriver();
+        driver = new FirefoxDriver();
     }
 
     @AfterClass
