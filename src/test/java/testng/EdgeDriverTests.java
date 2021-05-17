@@ -35,7 +35,7 @@ public class EdgeDriverTests extends BaseTest {
         String wikiPageTitle = driver.getTitle();
         logger.info(String.format("Wiki Page Title: %s", wikiPageTitle));
         int wikiTitleLength = driver.getTitle().length();
-        logger.info("Wiki Page Title Length is: " + wikiTitleLength);
+        logger.info(String.format("Wiki Page Title Length: %s", wikiTitleLength));
         String wikiPageURL = driver.getCurrentUrl();
         Assert.assertTrue(wikiPageURL.contains("wikipedia.org"), "Current URL is incorrect.");
         logger.info("The current page URL is: " + wikiPageURL);
