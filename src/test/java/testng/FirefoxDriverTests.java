@@ -27,17 +27,20 @@ public class FirefoxDriverTests extends BaseTest {
         new WebDriverWait(driver, 5)
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='Tg7LZd']")));
         Assert.assertTrue(true, String.valueOf(driver.findElement(By.xpath("(.//a[contains(@href,'wikipedia.org')])[1]"))));
+
         WebElement clickLink = driver.findElement(By.xpath("(.//a[contains(@href,'wikipedia.org')])[1]"));
         clickLink.click();
         new WebDriverWait(driver, 5)
                 .until(ExpectedConditions.urlContains("wikipedia.org"));
         Assert.assertTrue(true, String.valueOf(driver.findElement(By.xpath("(.//a[contains(@accesskey,'z')])[1]"))));
+
         String wikiPageTitle = driver.getTitle();
         logger.info(String.format("Wiki Page Title: %s", wikiPageTitle));
         int wikiTitleLength = driver.getTitle().length();
         logger.info(String.format("Wiki Page Title Length: %s", wikiTitleLength));
         String wikiPageURL = driver.getCurrentUrl();
         Assert.assertTrue(wikiPageURL.contains("wikipedia.org"), "Current URL is incorrect.");
+
         logger.info(String.format("The current page URL: %s", wikiPageURL));
         int wikiPageLength = driver.getPageSource().length();
         logger.info(String.format("Wiki Page Source Length: %s", wikiPageLength));
