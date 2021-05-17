@@ -43,7 +43,7 @@ public class ChromeDriverTests extends BaseTest {
         logger.info("Wiki Page Source Length: " + wikiPageLength);
         WebElement screenshotOfTheFirstDYKSectionElement = driver.findElement(By.xpath("//div[contains(@id,'dyk')]//img"));
         Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver, screenshotOfTheFirstDYKSectionElement);
-        ImageIO.write(screenshot.getImage(), "jpg", new File("C:\\Users\\Volodymyr_Protsiv\\Desktop\\JavaMentoringProgram\\M6_Webdriver_and_Locators\\hello-webdriver\\target\\ElementScreenshot.jpg"));
+        ImageIO.write(screenshot.getImage(), "jpg", new File("C:\\Users\\Volodymyr_Protsiv\\Desktop\\JavaMentoringProgram\\M6_Webdriver_and_Locators\\M6_HW\\webdriver\\target\\ElementScreenshot.jpg"));
         WebElement wikipediaSearchInput = driver.findElement(By.name("search"));
         wikipediaSearchInput.sendKeys("Test Automation");
         WebElement wikipediaSearchButton = driver.findElement(By.xpath("//input[@name='search']"));
