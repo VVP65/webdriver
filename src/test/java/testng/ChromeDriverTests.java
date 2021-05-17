@@ -33,7 +33,7 @@ public class ChromeDriverTests extends BaseTest {
                 .until(ExpectedConditions.urlContains("wikipedia.org"));
         Assert.assertTrue(true, String.valueOf(driver.findElement(By.xpath("(.//a[contains(@accesskey,'z')])[1]"))));
         String wikiPageTitle = driver.getTitle();
-        logger.info("Wiki Page Title: " + wikiPageTitle);
+        logger.info(String.format("Wiki Page Title: %s", wikiPageTitle));
         int wikiTitleLength = driver.getTitle().length();
         logger.info("Wiki Page Title Length is: " + wikiTitleLength);
         String wikiPageURL = driver.getCurrentUrl();
