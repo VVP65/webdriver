@@ -17,7 +17,7 @@ import java.io.IOException;
 public class EdgeDriverTests extends BaseTest {
 
     @Test
-    public void EdgeBrowserTests() throws NullPointerException, IOException {
+    public void edgeBrowserTests() throws NullPointerException, IOException {
         driver.get("http://google.com");
         driver.manage().window().maximize();
         WebElement googleSearchInput = driver.findElement(By.name("q"));

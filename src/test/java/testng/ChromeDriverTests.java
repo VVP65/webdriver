@@ -17,7 +17,7 @@ import java.io.IOException;
 public class ChromeDriverTests extends BaseTest {
 
     @Test
-    public void ChromeBrowserTests() throws NullPointerException, IOException {
+    public void chromeBrowserTests() throws NullPointerException, IOException {
         driver.get("http://google.com");
         driver.manage().window().maximize();
         WebElement googleSearchInput = driver.findElement(By.name("q"));
