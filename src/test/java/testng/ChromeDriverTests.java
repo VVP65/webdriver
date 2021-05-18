@@ -57,6 +57,6 @@ public class ChromeDriverTests extends BaseTest {
         new WebDriverWait(driver, 5)
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//h1[@id='firstHeading']")));
         String contentOfWikipediaSearchResult = wikipediaSearchResult.getText();
-        Assert.assertTrue(contentOfWikipediaSearchResult.contains("Test Automation"), "The search results are not contain expected text.");
+        Assert.assertFalse(contentOfWikipediaSearchResult.contains("Test automation"), "The search results are not contain expected text.");
     }
 }
