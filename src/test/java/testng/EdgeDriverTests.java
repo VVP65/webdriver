@@ -26,9 +26,9 @@ public class EdgeDriverTests extends BaseTest {
         googleSearchButton.submit();
         new WebDriverWait(driver, 5)
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='Tg7LZd']")));
-        Assert.assertTrue(true, String.valueOf(driver.findElement(By.xpath("(.//a[contains(@href,'wikipedia.org')])[1]"))));
-
         WebElement clickLink = driver.findElement(By.xpath("(.//a[contains(@href,'wikipedia.org')])[1]"));
+        Assert.assertTrue(clickLink.getText().contains("wikipedia.org"), "clickLink NOT contains 'wikipedia.org' text");
+
         clickLink.click();
         new WebDriverWait(driver, 5)
                 .until(ExpectedConditions.urlContains("wikipedia.org"));

@@ -16,10 +16,10 @@ public class BaseTest {
     public void browserSetUp() {
         System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\webdrivers\\chromedriver.exe");
         driver = new ChromeDriver();
-        System.setProperty("webdriver.edge.driver", "src\\main\\resources\\webdrivers\\msedgedriver.exe");
-        driver = new EdgeDriver();
-        System.setProperty("webdriver.geco.driver", "src\\main\\resources\\webdrivers\\gecodriver.exe");
-        driver = new FirefoxDriver();
+//        System.setProperty("webdriver.edge.driver", "src\\main\\resources\\webdrivers\\msedgedriver.exe");
+//        driver = new EdgeDriver();
+//        System.setProperty("webdriver.geco.driver", "src\\main\\resources\\webdrivers\\gecodriver.exe");
+//        driver = new FirefoxDriver();
     }
 
     @AfterClass
@@ -28,4 +28,3 @@ public class BaseTest {
         driver = null;
     }
 }
-
