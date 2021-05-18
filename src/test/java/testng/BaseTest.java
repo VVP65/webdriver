@@ -1,6 +1,5 @@
 package testng;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,9 +14,11 @@ public class BaseTest {
 
     @BeforeClass
     public void browserSetUp() {
+        System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\webdrivers\\chromedriver.exe");
         driver = new ChromeDriver();
-        WebDriverManager.edgedriver().setup();
+        System.setProperty("webdriver.edge.driver", "src\\main\\resources\\webdrivers\\msedgedriver.exe");
         driver = new EdgeDriver();
+        System.setProperty("webdriver.geco.driver", "src\\main\\resources\\webdrivers\\gecodriver.exe");
         driver = new FirefoxDriver();
     }
 
